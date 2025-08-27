@@ -1,0 +1,213 @@
+            /* 전체 배경색 ****************************************************************************/
+            body{background: #eeeeee;}
+            /* /전체 배경색 끝 */
+
+
+            /* nav 만드는 css ************************************************************************/
+            #collapsibleNavbar .dropdown-toggle:hover+.dropdown-menu{
+                display: block;
+            }
+            .navbar{
+                background:white;
+                padding:0 !important;
+                margin:0 !important;
+                height: 70px !important;
+            }
+
+            /* /nav 만드는 css 끝 */
+            
+            /* slider 만드는 css ********************************************************************/
+            .slider-pc{display: block !important;}  
+            .slider-m{display: none !important;}  
+            .slider-container { 
+            max-width: 1500px;
+            height: 570px !important;
+            margin: 50px auto;
+            }
+            .slide{
+            position: relative; /* 부모의 position 설정 */
+            }
+            .slide .caption, 
+            .slide .more{
+            position: absolute; /* 자식 position:absolute 설정. grouping */
+            }
+            .slide .caption{
+            left: 5px;
+            top:200px;
+            color: #ffffff;
+            text-align: left;
+            }
+            .slide .more{
+            left: 5px;
+            top:300px;
+            }
+            .slider .slide {
+            margin: 0 10px; /* 슬라이드 간 간격 */
+            }
+            .slider .slide img {
+            width: 100%;
+            height: 570px;
+            border-radius: 10px;
+            }
+            .slider .slide .btn{
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            padding-left: 50px;
+            padding-right: 50px;
+            border:none;
+            border-radius: 50px;
+            
+            }
+
+            @media screen and (max-width:767px) {
+            .slide{ text-align: center !important;}
+            .slider .slide img {
+                width: 100%;
+                height: 700px;
+                border-radius: 10px;
+            }
+            .slider-pc{display: none !important;}  
+            .slider-m{display: block !important;}    
+            .slide .caption,
+            .slide .more{      
+                width: 100%;        
+            }
+            .slide .caption{     
+                top: 550px !important;
+            }
+            .slide .more{     
+                top: 650px !important;     
+            }
+            .slider .slide .btn{
+                /* 버튼 박스 크기 키운것 */
+                padding-left: 150px;
+                padding-right: 150px;
+                border:none;
+                border-radius: 150px;
+                /* /버튼 박스  크기 키운것 */
+            }
+            }
+        /* /slider 만드는 css 끝 */
+
+        /* humbnail 만드는 css ********************************************************************************/
+            .thumbnail{
+            border-radius: 10px !important;
+            background: white;
+            }
+            .thumbnail img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: 300px;
+            }
+            #pick h1{
+                text-align: center;
+            }
+            .thumbnail p, .btn{
+                margin: 20px;
+                text-align: left;
+            }
+            .thumbnail .btn{
+            padding-left: 1px;
+            }
+        /* /humbnail 만드는 css 끝 */
+
+        /* story,tomorrow 만드는 css  ******************************************************************************/
+
+            #story .col-md-6 img,
+            #tomorrow .col-md-6 img{
+            width:100%;
+            height: 100%;;
+            }
+            .container{
+                padding-top: 50px;
+                padding-bottom: 50px;
+                
+            }
+            #story{
+                background-color: blue;
+                /* position: relative; */
+            }
+
+            #story .col-md-6,
+            #tomorrow .col-md-6
+            {
+            border-radius: 10px !important;
+            background: white;
+            /* position: absolute; */
+            text-align: left;
+                
+            }
+            #story .col-md-6 img,
+            #tomorrow .col-md-6 img
+            {
+                border-radius: 10px;
+                
+            }
+            #story .col-md-6:nth-child(1){
+                /* top: 50px !important;
+                left: 0 !important; */
+                z-index: 999999;
+                
+            }
+            /* #story .col-md-6:nth-child(2){
+            top: 100px !important;
+            left: 600px !important;  
+            } */
+            .col-md-6 .btn-outline-dark {
+                padding-left: 150px;
+                padding-right: 150px;
+                
+                border:2px solid black;
+                border-radius: 50px;
+                margin-top: 160px;
+                
+                
+            }
+
+        /* /story,tomorrow 만드는 css 끝*/
+
+        /* 브랜드 살펴 보기 만드는 css *************************************************/
+
+            #brand .col-md-4{
+                background-color: white;
+                box-sizing: border-box;
+                border: 10px solid #eeeeee;
+                transition: 0.5s;
+            }
+            #brand .col-md-4 img{
+                width: 100%;
+            }
+            #brand .col-md-4:hover{
+                transform: scale(1.05);
+            }
+
+        /* 브랜드 살펴보기 만드는 css 끝 */
+
+        /* footer 만드는 css ***********************************************************************/
+            footer.container-fluid,
+            hr {
+                color: white;
+                background-color: black;
+            }
+            footer ul {
+                list-style:none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            footer ul li{
+                font-size: 14px;
+                margin-bottom: 8px;
+                line-height: 1.6;
+            }
+            footer h6{
+                font-size: 12px;
+                font-weight: normal;
+                margin-top: 20px;
+                padding-bottom: 10px;
+                color: white;
+            }
+        /* /footer 만드는 css 끝 */
+
