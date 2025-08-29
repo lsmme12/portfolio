@@ -1,213 +1,390 @@
-            /* 전체 배경색 ****************************************************************************/
-            body{background: #eeeeee;}
-            /* /전체 배경색 끝 */
+    /* 기본 설정 */
+    body {
+    background: #eeeeee;
+    }
+
+    .container {
+    padding: 0 5%;
+    }
+
+    /* nav 만드는 css ************************************************************************/
+    
+    .navbar {
+    background: white;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 70px !important;
+    }
+
+    #collapsibleNavbar-m {opacity: 0 !important;}  /* 모바일용 서브메뉴가 안보이게 */
+
+    #collapsibleNavbar .nav-item:hover .dropdown-menu {
+    display: block;
+    }
 
 
-            /* nav 만드는 css ************************************************************************/
-            #collapsibleNavbar .dropdown-toggle:hover+.dropdown-menu{
-                display: block;
-            }
-            .navbar{
-                background:white;
-                padding:0 !important;
-                margin:0 !important;
-                height: 70px !important;
-            }
+    #collapsibleNavbar .nav-item .dropdown-toggle::after {
+    border: 0 !important;
+    }
 
-            /* /nav 만드는 css 끝 */
-            
-            /* slider 만드는 css ********************************************************************/
-            .slider-pc{display: block !important;}  
-            .slider-m{display: none !important;}  
-            .slider-container { 
-            max-width: 1500px;
-            height: 570px !important;
-            margin: 50px auto;
-            }
-            .slide{
-            position: relative; /* 부모의 position 설정 */
-            }
-            .slide .caption, 
-            .slide .more{
-            position: absolute; /* 자식 position:absolute 설정. grouping */
-            }
-            .slide .caption{
-            left: 5px;
-            top:200px;
-            color: #ffffff;
-            text-align: left;
-            }
-            .slide .more{
-            left: 5px;
-            top:300px;
-            }
-            .slider .slide {
-            margin: 0 10px; /* 슬라이드 간 간격 */
-            }
-            .slider .slide img {
-            width: 100%;
-            height: 570px;
-            border-radius: 10px;
-            }
-            .slider .slide .btn{
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            padding-left: 50px;
-            padding-right: 50px;
-            border:none;
-            border-radius: 50px;
-            
-            }
+    #collapsibleNavbar .nav-item:hover i {
+    animation: ani01 0.5s ease-in-out forwards !important;
+    }
 
-            @media screen and (max-width:767px) {
-            .slide{ text-align: center !important;}
-            .slider .slide img {
-                width: 100%;
-                height: 700px;
-                border-radius: 10px;
-            }
-            .slider-pc{display: none !important;}  
-            .slider-m{display: block !important;}    
-            .slide .caption,
-            .slide .more{      
-                width: 100%;        
-            }
-            .slide .caption{     
-                top: 550px !important;
-            }
-            .slide .more{     
-                top: 650px !important;     
-            }
-            .slider .slide .btn{
-                /* 버튼 박스 크기 키운것 */
-                padding-left: 150px;
-                padding-right: 150px;
-                border:none;
-                border-radius: 150px;
-                /* /버튼 박스  크기 키운것 */
-            }
-            }
-        /* /slider 만드는 css 끝 */
+    @keyframes ani01 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(90deg); }
+    }
+    .slider-pc{display: block !important;}  
+    .slider-m{display: none !important;}  
+    /* /nav 만드는 css 끝 */
 
-        /* humbnail 만드는 css ********************************************************************************/
-            .thumbnail{
-            border-radius: 10px !important;
-            background: white;
-            }
-            .thumbnail img{
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            width: 100%;
-            height: 300px;
-            }
-            #pick h1{
-                text-align: center;
-            }
-            .thumbnail p, .btn{
-                margin: 20px;
-                text-align: left;
-            }
-            .thumbnail .btn{
-            padding-left: 1px;
-            }
-        /* /humbnail 만드는 css 끝 */
 
-        /* story,tomorrow 만드는 css  ******************************************************************************/
+    /* slider 만드는 css ********************************************************************/
+    .slider-container { 
+    max-width: 1500px;
+    height: 570px !important;
+    margin: 50px auto;
+    }
 
-            #story .col-md-6 img,
-            #tomorrow .col-md-6 img{
-            width:100%;
-            height: 100%;;
-            }
-            .container{
-                padding-top: 50px;
-                padding-bottom: 50px;
-                
-            }
-            #story{
-                background-color: blue;
-                /* position: relative; */
-            }
+    .slide {
+    position: relative; /* 부모의 position 설정 */
+    }
 
-            #story .col-md-6,
-            #tomorrow .col-md-6
-            {
-            border-radius: 10px !important;
-            background: white;
-            /* position: absolute; */
-            text-align: left;
-                
-            }
-            #story .col-md-6 img,
-            #tomorrow .col-md-6 img
-            {
-                border-radius: 10px;
-                
-            }
-            #story .col-md-6:nth-child(1){
-                /* top: 50px !important;
-                left: 0 !important; */
-                z-index: 999999;
-                
-            }
-            /* #story .col-md-6:nth-child(2){
-            top: 100px !important;
-            left: 600px !important;  
-            } */
-            .col-md-6 .btn-outline-dark {
-                padding-left: 150px;
-                padding-right: 150px;
-                
-                border:2px solid black;
-                border-radius: 50px;
-                margin-top: 160px;
-                
-                
-            }
+    .slide .caption,
+    .slide .more {
+    position: absolute; /* 자식 position:absolute 설정 */
+    }
 
-        /* /story,tomorrow 만드는 css 끝*/
+    .slide .caption {
+    left: 5px;
+    top: 200px;
+    color: #ffffff;
+    text-align: left;
+    }
 
-        /* 브랜드 살펴 보기 만드는 css *************************************************/
+    .slide .more {
+    left: 5px;
+    top: 300px;
+    }
 
-            #brand .col-md-4{
-                background-color: white;
-                box-sizing: border-box;
-                border: 10px solid #eeeeee;
-                transition: 0.5s;
-            }
-            #brand .col-md-4 img{
-                width: 100%;
-            }
-            #brand .col-md-4:hover{
-                transform: scale(1.05);
-            }
+    .slider .slide {
+    margin: 0 10px; /* 슬라이드 간 간격 */
+    }
 
-        /* 브랜드 살펴보기 만드는 css 끝 */
+    .slider .slide img {
+    width: 100%;
+    height: 570px;
+    border-radius: 10px;
+    }
 
-        /* footer 만드는 css ***********************************************************************/
-            footer.container-fluid,
-            hr {
-                color: white;
-                background-color: black;
-            }
-            footer ul {
-                list-style:none;
-                padding: 0;
-                margin: 0;
-            }
-            
-            footer ul li{
-                font-size: 14px;
-                margin-bottom: 8px;
-                line-height: 1.6;
-            }
-            footer h6{
-                font-size: 12px;
-                font-weight: normal;
-                margin-top: 20px;
-                padding-bottom: 10px;
-                color: white;
-            }
-        /* /footer 만드는 css 끝 */
+    .slider .slide .btn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    border-radius: 50px;
+    }
+    /* /slider 만드는 css 끝 */
+
+
+    /* 모바일 화면 만드는 css ****************************************************************/
+    @media screen and (max-width:767px) {
+
+
+    #collapsibleNavbar-m {opacity: 1 !important;}
+
+     #collapsibleNavbar {
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: white !important;
+        z-index: 99999 !important;
+        color: black !important;
+        top: 0;
+        left: 0;
+    } 
+        /*  코카콜라 아이콘 , 햄버거 메뉴 위로 올라가게 */
+    nav .container{padding: 0 10px !important;}
+
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\f054'; /* '>' 화살표 아이콘 */
+        font-family: "Font Awesome 7 Free"; /* fontawesom 7버젼 */
+        
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\f078";
+        
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .slide { 
+        text-align: center !important;
+    }
+
+    .slider-container,
+    .slider,
+    .slider .slide,
+    .slider .slide img {
+        width: 100%;
+        height: 700px !important;
+        border-radius: 10px;
+    }
+
+    .slider-pc { display: none !important; }  
+    .slider-m { display: block !important; }   
+
+    .slide .caption,
+    .slide .more {      
+        width: 100%;
+    }
+
+    .slide .caption {     
+        top: 550px !important;
+    }
+
+    .slide .more {     
+        top: 650px !important;     
+    }
+
+    .slider .slide .btn {
+        padding-left: 150px;
+        padding-right: 150px;
+        border: none;
+        border-radius: 150px;
+    }
+    }
+    #pick .col-md-4{
+        padding-bottom: 15px;
+    }
+
+    #stoty .col-md-6:nth-child(1){
+        width: 450px !important;
+        height: 200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: -50px !important;  /* 아래쪽 박스가 위로 올라와서 겹치게   */
+    }
+
+    #brand{display:none;}
+    #brand-m{display:block;} /* mobile용 brand는 안보이게 */
+
+    #brand-m .col-md-6{
+        background: white;
+        box-sizing: border-box;
+        margin: 10px;
+        transition: 0.5s;
+        width:210px;
+        height: 210px;
+        border-radius: 10px !important;
+
+    }
+
+    #brand-m .col-md-6 img{
+        width: 100%;  
+    }
+
+    #brand-m .col-md-6:hover{
+        transform: scale(1.05);
+    }
+
+
+    /* /모바일 화면 만드는 css 끝 */
+
+
+    /* humbnail 만드는 css *******************************************************************/
+    .thumbnail {
+    border-radius: 10px !important;
+    background: white;
+    }
+
+    .thumbnail img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 300px;
+    }
+
+    
+
+
+    #pick h1 {
+    text-align: center;
+    }
+
+    .thumbnail p,
+    .btn {
+    margin: 20px;
+    text-align: left;
+    }
+
+    .thumbnail .btn {
+    padding-left: 1px;
+    }
+    /* /humbnail 만드는 css 끝 */
+
+
+    /* story, tomorrow 만드는 css ***********************************************************/
+    #story .col-md-6 img,
+    #tomorrow .col-md-6 img {
+    width: 100%;
+    height: 100%;
+    }
+
+    .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
+
+    #story {
+    background-color: blue;
+    }
+
+    #story .col-md-6,
+    #tomorrow .col-md-6 {
+    border-radius: 10px !important;
+    background: white;
+    height: 500px !important;
+    padding: 0;
+    }
+
+    #story .col-md-6 img,
+    #tomorrow .col-md-6 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    }
+
+    #tomorrow .row,
+    #story .row {
+    display: flex !important;
+    align-items: center !important;
+    background: green;
+    height: 600px !important;
+    }
+
+    
+    
+    #story .col-md-6:nth-child(1) {
+    align-self: flex-start !important;
+    }
+    #story .col-md-6:nth-child(2) {
+    align-self: flex-and !important;
+    }
+    #tomorrow .col-md-6:nth-child(1) {
+    align-self: flex-end !important;
+    }
+    #tomorrow .col-md-6:nth-child(2) {
+    align-self: flex-start !important;
+    }
+    #tomorrow .col-md-6:nth-child(1),
+    #story .col-md-6:nth-child(1) {
+    margin-right: -100px !important;
+    }
+
+    #story .col-md-6:nth-child(1) {
+    z-index: 999;
+    }
+    #story .col-md-6:nth-child(2),
+    #tomorrow .col-md-6:nth-child(1){
+        width: 670px;
+    }
+
+    /* /story, tomorrow 만드는 css 끝 */
+
+
+    /* 브랜드 살펴 보기 만드는 css **********************************************************/
+    #brand{display: block;}
+    #brand-m{display: none;}
+
+
+
+    #brand .col-md-4 {
+    background: white;
+    box-sizing: border-box;
+    margin: 10px;
+    transition: 0.5s;
+    width: 230px;
+    height: 230px;
+    border-radius: 10px !important;
+    }
+
+    #brand .col-md-4 img {
+    width: 100%;
+    border-radius: 10px !important;
+    }
+
+    #brand .col-md-4:hover {
+    transform: scale(1.05);
+    }
+
+    
+
+
+
+
+
+    /* /브랜드 살펴보기 만드는 css 끝 */
+
+
+    /* footer 만드는 css ********************************************************************/
+    footer.container-fluid,
+    hr {
+    color: white;
+    background: black;
+    }
+
+    footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    footer ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    }
+
+    footer h6 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    color: white;
+    }
+    /* /footer 만드는 css 끝 */
+
 
